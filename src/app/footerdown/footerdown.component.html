@@ -1,0 +1,98 @@
+<mat-card style="height:500px;">
+    <mat-grid-list cols="1" rowHeight="500px">
+        <mat-grid-tile>
+            <mat-card-header>
+                <mat-card-title><h1 style="font-size: 35px; color:indigo; text-align: center;"><b>"RESPECT THE CODEMASTER'S"</b></h1></mat-card-title>
+            </mat-card-header>            
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
+
+<mat-grid-list 
+    [cols]="breakpoint" 
+    rowHeight="220px" 
+    gutterSize="0" 
+    (window:resize)="onResize($event)"
+    >
+    <mat-grid-tile>
+        <mat-card 
+    style="background-color: indigo;"
+
+            class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    <span 
+                        class="mat-h1">
+                        {{ websiteName }}
+                    </span>
+                </mat-card-title>
+            </mat-card-header>
+        </mat-card>
+    </mat-grid-tile>
+
+    <!-- <mat-grid-tile>
+    <mat-card 
+        class="card">
+    </mat-card>
+    </mat-grid-tile> -->
+
+    <mat-grid-tile>
+        <mat-card 
+    style="background-color: indigo;"
+            class="card">
+            <mat-card-actions>
+
+                <button 
+                    mat-mini-fab 
+                    color="">
+                    <mat-icon>
+                        facebook
+                    </mat-icon>
+                </button>
+                <span 
+                class="mat-h2">
+                Facebook
+                </span> 
+                <br><br>
+
+                <button 
+                    mat-mini-fab 
+                    color="">
+                    <mat-icon>
+                        whatsapp
+                    </mat-icon>
+                </button>
+
+                <span 
+                    class="mat-h2">
+                    Whatsapp
+                </span> 
+                <br><br>
+
+                <button 
+                    mat-mini-fab 
+                    color="">
+                    <mat-icon>
+                        email
+                    </mat-icon>
+                </button> 
+                <span 
+                    class="mat-h2">
+                    Email
+                </span> 
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-card 
+    style="background-color: indigo; border-radius: 0%;">
+    <mat-card-header>
+        <mat-card-subtitle  
+            style="text-align: right; color: white;">
+           <span>
+               2021 {{ websiteName }}
+           </span> 
+        </mat-card-subtitle>
+    </mat-card-header>
+</mat-card>

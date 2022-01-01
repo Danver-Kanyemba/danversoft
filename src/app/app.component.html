@@ -1,0 +1,127 @@
+<!-- progress bar -->
+<mat-progress-bar
+  *ngIf="isLoadingTheBar"
+  mode="indeterminate"
+  value="50"
+  color="warn">
+</mat-progress-bar>
+
+<div 
+  class="body2" 
+  style="
+    height:100px; 
+    align-items:center; 
+    display:flex;">
+<img 
+  src="/../assets/danverkanyemba.png" 
+  style="
+    height:40px; 
+    width:30px; border: 
+    1px solid white;" 
+    alt="">
+      <h1
+        @fade
+        style="padding-top: 20px;"
+        class="mat-h1">
+        {{ website_Name }}
+      </h1>
+
+</div>
+<div class="body2">
+<!-- toolbar with navigation links-->
+<mat-toolbar
+  class="topnavtoolbar"
+  >
+  <mat-toolbar-row>
+
+
+
+    <span
+      class="flexExpand">
+    </span>
+
+    <button
+      mat-button
+      routerLink="/"
+      class="mat-title"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:
+      true}">
+      <b>
+      Home</b>
+    </button>
+
+    <button
+      mat-button
+      routerLink="/"
+      class="mat-title"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:
+      true}">
+      <b>
+      FAQ
+      </b>
+    </button>
+    <button
+      mat-button
+      *ngIf="(afAuth.authState | async) === null"
+      (click)="signIn()"
+      class="mat-title"
+      routerLinkActive="active"
+      [matMenuTriggerFor]="login"
+
+      [routerLinkActiveOptions]="{exact:true}">
+      <mat-icon>google</mat-icon>
+      Login
+    </button>
+    <mat-menu
+  #login="matMenu">
+  <button mat-button color="warn">Login with<mat-icon>google</mat-icon> Google</button>
+  </mat-menu>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row
+  *ngIf="afAuth.user | async as user"
+  >
+  <button
+  mat-button
+  [matMenuTriggerFor]="menu"
+  >
+  <mat-icon>account_circle</mat-icon>
+  {{ user.displayName}}
+</button>
+
+<mat-menu
+  #menu="matMenu">
+<button
+  mat-button
+  *ngIf="(afAuth.authState | async)"
+  (click)="signOut()"
+  class="mat-title"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact:true}">
+  <mat-icon>logout</mat-icon>
+  Sign Out
+</button>
+</mat-menu>
+
+    <button
+      mat-button
+      routerLink="admin/pricing"
+      class="mat-title"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:true}">
+      Admin price
+    </button>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+</div>
+<br>
+<br>
+<br>
+<!-- for SPA -->
+<router-outlet></router-outlet>
+<!-- footer -->
+
+<app-footerdown></app-footerdown>

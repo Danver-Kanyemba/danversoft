@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap";
+
+body{
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.body2{
+  padding: 0px 20px;
+}
+.body3{
+  padding: 0px 0px;
+}
+
+.mat-h1{
+    color: rgb(53, 0, 50);
+  font-size: 40px;
+
+}
+
+h1{
+  color: rgb(32, 0, 54);
+}
+p{
+  color: rgb(21, 0, 36);
+}
+
+.matcardstyle {
+  border-radius: 0px;
+}
+
+.matcardstylecomplex {
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0px;
+}

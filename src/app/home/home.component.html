@@ -1,0 +1,61 @@
+  <!-- test -->
+  <div 
+  *ngFor="let course_list_tile of course_list_from_db, index as cs_index" 
+  style="margin: 0px; padding: 0px;">
+  
+  <mat-card
+     class="matcardstyle"
+     matRipple 
+     (click)="openDialog(cs_index)"
+     style="max-width: 700px; width: 100%;  " >
+     
+     <div       
+     >
+     <mat-card-header>
+                <mat-card-title style="color: indigo;">
+                  
+                      {{course_list_tile.title}}
+                
+        </mat-card-title> 
+        <br>   
+        <mat-card-subtitle>
+          <p>
+            {{course_list_tile.price}} {{course_list_tile.time}}
+          </p>
+          <p style="color: rgb(32, 32, 32); height: 48px; max-height: 48px;">
+          {{course_list_tile.topic}}
+        </p>
+        <br>
+      </mat-card-subtitle>
+    </mat-card-header> 
+      <mat-card-content>
+
+      <mat-chip-list
+        class="example-chip"
+        cdkDropList 
+        cdkDropListOrientation="horizontal"
+        >
+        <mat-chip
+          color="primary"
+          class="example-box"
+          cdkDrag
+          *ngFor="let course_skill of course_list_tile.skill; index as i"
+          >
+          {{course_skill}}
+        </mat-chip>
+        
+        <br>
+<br> 
+</mat-chip-list>
+<mat-card-subtitle>
+<mat-icon>location_on</mat-icon> Worldwide. Connect with Zoom, Google meet, Whatsapp and TeamViewer.
+Whatsapp is for messages only
+</mat-card-subtitle>
+
+</mat-card-content> 
+    </div>       
+   
+    </mat-card> 
+  </div>
+
+TODO: Link blog to firebase

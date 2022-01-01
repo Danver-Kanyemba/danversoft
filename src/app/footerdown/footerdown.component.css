@@ -1,0 +1,15 @@
+.card{
+    background-color: #009fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 0%;
+    padding-top: 100px;
+}
+.mat-h2{
+color: white;
+font-size: 17px;
+}
+.leftcont{
+    text-align: right;
+
+}
