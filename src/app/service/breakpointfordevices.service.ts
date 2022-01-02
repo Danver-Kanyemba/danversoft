@@ -14,7 +14,7 @@ export class BreakpointfordevicesService {
 
   }
   get onInCurrentGridwith2(){
-    return  (window.innerWidth <= 600) ? 1 : 2;
+    return  (window.innerWidth <= 832) ? 1 : 2;
 
   }
   getonResizeCurrentGridwith3(event:any){
@@ -22,7 +22,7 @@ export class BreakpointfordevicesService {
 
   }
   getonResizeCurrentGridwith2(event:any){
-    return (event.target.innerWidth <= 600) ? 1 : 2;
+    return (event.target.innerWidth <= 832) ? 1 : 2;
 
     }
   getonResizeCurrentGridwith5(event:any){

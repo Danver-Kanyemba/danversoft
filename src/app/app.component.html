@@ -53,15 +53,29 @@
 
     <button
       mat-button
-      routerLink="/"
+      routerLink="courses/list"
       class="mat-title"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{exact:
       true}">
       <b>
-      FAQ
+      Courses
       </b>
     </button>
+
+    <button
+      mat-button
+      href="https://danver-kanyemba.github.io/"
+      (click)="openDanversoftOfficial()"
+      class="mat-title"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:
+      true}">
+      <b>
+      Code web
+      </b>
+    </button> 
+
     <button
       mat-button
       *ngIf="(afAuth.authState | async) === null"

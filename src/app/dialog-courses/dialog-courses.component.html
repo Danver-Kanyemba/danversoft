@@ -3,17 +3,13 @@
         {{courses_list[index_num].title}}
     </b>     
 </h1>              
-
 <mat-divider>
 </mat-divider>
 
-<mat-dialog-content>
-    
-    
+<mat-dialog-content>  
     <div
     style="border: 2px solid indigo; padding: 10px;"
-    >    
-    
+    > 
     <h2>
         Discover
     </h2>
@@ -23,7 +19,6 @@
     style="font-size: medium;"> 
     <p>
         <mat-icon style="color: indigo;">psychology_sharp</mat-icon>
-        
         {{course_discover}}        
     </p> 
 </span>
@@ -31,24 +26,24 @@
 <h1>Skills Set</h1>
 <mat-chip-list
 class="example-chip"
-          cdkDropList 
-          cdkDropListOrientation="horizontal"
-          >
-          <mat-chip
-          class="example-box"
-            cdkDrag
-            *ngFor="let course_skill of courses_list[index_num].skill">
-            {{course_skill}}
-          </mat-chip>
-          <br>
-        </mat-chip-list>
-        
-        <h1>
-            <b>
+cdkDropList 
+cdkDropListOrientation="horizontal"
+>
+<mat-chip
+class="example-box"
+cdkDrag
+*ngFor="let course_skill of courses_list[index_num].skill">
+{{course_skill}}
+</mat-chip>
+<br>
+</mat-chip-list>
+
+<h1>
+    <b>
                 This courses content
             </b>
         </h1>
-
+        
         <h2>
             Hands-On Projects 
         </h2>
@@ -58,12 +53,11 @@ class="example-chip"
         
         <h2>
             Instructor
-            
         </h2>
         <div mat-card-avatar style="background-image: url({{courses_list[index_num].instructor_image}}); background-size: cover;" ></div>
         <p>{{courses_list[index_num].instructor}}</p>
-
-</div>
+        
+    </div>
 </mat-dialog-content> 
 
 <br>
@@ -75,10 +69,12 @@ class="example-chip"
     (click)="addCourse(courseTitle)"
     >
     Enroll for {{courses_list[index_num].price}}
-</button> 
-<button 
-style="height: 50px;"
-mat-button 
-mat-dialog-close
->Cancel</button>
+    </button> 
+
+    <button 
+    style="height: 50px;"
+    mat-button 
+    mat-dialog-close
+    >Cancel
+    </button>
 </mat-dialog-actions>

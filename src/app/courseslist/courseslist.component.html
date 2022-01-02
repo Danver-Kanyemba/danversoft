@@ -5,25 +5,25 @@
         <h1>Select courses to enroll in.</h1>
         <!-- Home component with list of courses -->
         <app-home></app-home>
-
+        
         <!-- <mat-form-field appearance="fill">
           <mat-label>Name</mat-label>
           <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-
+          
         </mat-form-field> -->
         <h1>
           This is the list of selected courses
         </h1>
-        <mat-form-field appearance="fill">
-
-        <mat-chip-list
-        class="example-chip"
-        cdkDropList 
-        cdkDropListOrientation="horizontal"
-        >
         
-        <mat-chip
-        formControlName="selectedCourseFrm"
+        <!-- display list of selected courses -->
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-chip-list
+          class="example-chip"
+          cdkDropList 
+          cdkDropListOrientation="horizontal"
+          >
+          <mat-chip
+          formControlName="selectedCourseFrm"
           color="primary"
           class="example-box"
           cdkDrag
@@ -32,48 +32,84 @@
           >
           {{course_select}}
           <button 
-            mat-icon-button 
-            (click)="remove_from_list(coursenm)"
+          mat-icon-button 
+          (click)="remove_from_list(coursenm)"
             ><mat-icon>close</mat-icon></button>
-        </mat-chip>
+          </mat-chip>
         </mat-chip-list>
-
+        
         <mat-error>
           Please select at least 1 course
         </mat-error>
-        </mat-form-field>
-
-
-        <div>
-           <p>
-               When you have selected the courses you need click
-           </p> 
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Fill out your details</ng-template>
-
-        <mat-form-field appearance="fill">
-          <mat-label>Full name</mat-label>
-          <input matInput formControlName="secondCtrl"
-                 required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
+      </mat-form-field>
+      
+      
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <p>
+          When you have selected the courses you need click
+        </p> 
+        <button mat-button matStepperNext>Next</button>
       </div>
-    </mat-step>
-  </mat-stepper>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your details</ng-template>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Full name</mat-label>
+          <input 
+          matInput 
+          formControlName="full_Name"
+          required>
+          <mat-hint>Ex. Mrs Crowley</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input 
+    matInput 
+    formControlName="email"
+    required>
+    <mat-hint>mcrowley@gmail.com</mat-hint>
+  </mat-form-field>
+</p>
+
+<div>
+  <button mat-button matStepperPrevious>Back</button>
+  <button mat-button matStepperNext>Next</button>
+</div>
+</form>
+</mat-step>
+<mat-step >
+  <ng-template matStepLabel>Bookings</ng-template>
+  <p>This is the last step you may click the whatsapp icon to submit your details to DanverSoft Whatsapp</p>
   
+  <button 
+  (click)="goToLink()"
+  mat-fab 
+  style="background-color: rgb(0, 216, 0);"
+  >
+  <mat-icon style="color: white;">whatsapp</mat-icon>
+</button>
+
+<button
+(click)="goToLink()"
+mat-button >
+Book on whatsapp
+</button>
+<div></div>
+<button mat-button matStepperPrevious>Back</button>
+<button mat-button matStepperNext>Next</button>
+
+</mat-step>
+<mat-step>
+  <ng-template matStepLabel>Done</ng-template>
+  <p>You are now done.</p>
+  <div>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button (click)="stepper.reset()">Reset</button>
+  </div>
+</mat-step>
+</mat-stepper>

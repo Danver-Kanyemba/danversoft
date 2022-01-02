@@ -7,7 +7,6 @@ import { AngularFireAuth } from "@angular/fire/compat/auth";
 import firebase from 'firebase/compat/app';
 import { UserService } from './service/user.service';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -32,15 +31,12 @@ export class AppComponent {
           // Show loading indicator
           this.isLoadingTheBar = true;
           console.log("navigation started"+ this.isLoadingTheBar);
-
         }
-
         if (event instanceof NavigationEnd) {
           // Hide loading indicator
           this.isLoadingTheBar = false;
           console.log("navigation stoped"+ this.isLoadingTheBar);
         }
-
         if (event instanceof NavigationError) {
           // Hide loading indicator
           this.isLoadingTheBar = false;
@@ -63,5 +59,8 @@ async signIn(){
 signOut(){
   this.afAuth.signOut();
   this.router.navigate(['/']);
+}
+openDanversoftOfficial(){
+  window.open("https://danver-kanyemba.github.io/")
 }
 }

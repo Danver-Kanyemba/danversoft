@@ -8,17 +8,20 @@ export class CourseListService {
     {
       'title':'DS100 Website Development',
       'topic':'greatest teachers in the world',
-      'price':'Hourly: $10.00-$30', 
+      'price':'Hourly: $10.00', 
       'time':'Est.Time Less than a month, Less than 30hrs/week',
       'discover':[
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Fdollow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follodw the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
+        "How to create the Website User Interface and style it",
+        "How to apply Javascript to a website",
+        "how to connect to the database using PHP and perform SQL queries"
       ],
       'courses_content':[
-        "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+        "Lecture 1. Introduction to Website development",
+        "Lecture 2. Tools used and shortcuts",
+        "Lecture 3. HTML for Beginner",
+        "Lecture 4. Cascading Style Sheet (CSS) for Beginner",
+        "Lecture 5. Javascript for Beginner",
+        "Lecture 6. PHP for Beginner",
       ],
       'instructor': [
         'Danver Kanyemba'
@@ -36,17 +39,18 @@ export class CourseListService {
     {
       'title':'DS101 Vue Framework',
       'topic':'greatest teachers in the world',
-      'price':'Hourly: $10.00-$30', 
+      'price':'Hourly: $10.00', 
       'time':'Est.Time Less than a month, Less than 30hrs/week',
       'discover':[
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
+        "How to become a Frontend-end Developer",
+        "How to create projects and components",
+        "How to use Vuetify",
       ],
       'courses_content':[
-        "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+        "Lecture 1. Introduction to Vue.js Framework.",
+        "Lecture 2. Installing Vue.js and other requirements.",
+        "Lecture 3. Creating project and other selections.",
+        "Lecture 4. Components structure",
       ],
       'instructor': [
         'Danver Kanyemba'

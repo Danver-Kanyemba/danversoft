@@ -34,7 +34,8 @@ export class CourseslistComponent implements OnInit {
       selectedCourseFrm: [[this.selected_courses], Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+      full_Name: ['', Validators.required],
+      email: ['', Validators.email]
     });
 
     // this.firstFormGroup.controls('selectedCourseFrm').setValue(this.selct_cs_service.select_these_ones)
@@ -45,7 +46,13 @@ export class CourseslistComponent implements OnInit {
     this.selct_cs_service.delete(course_select)
   }
 
-  
+
+  goToLink(){
+    let f_name = this.secondFormGroup.get('full_Name')
+    let my_email = this.secondFormGroup.get('email')
+    window.open("https://wa.me/+263784017784?text=Hi%20im%20interested%20in%20"+this.selected_courses+"%20.%20My%20name%20is%20"+f_name.value+"%20and%20email%20"+my_email.value+".")
+  }
+
   onResize(event:any) {
     this.breakpoint = this.breakpointService.getonResizeCurrentGridwith2(event);
   }

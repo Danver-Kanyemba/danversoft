@@ -6,41 +6,16 @@ import { MusicService } from "../service/music.service";
 import { DialogCoursesComponent } from '../dialog-courses/dialog-courses.component';
 import { CourseListService } from '../service/course-list.service';
 
-export interface Vegetable {
-  name: string;
-}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   // allMusic$ = this.ms.allMusic$;
   breakpoint:any;
 
-  vegetables: Vegetable[] = [
-    {name: 'apple'},
-    {name: 'banana'},
-    {name: 'strawberry'},
-    {name: 'orange'},
-    {name: 'kiwi'},
-    {name: 'cherry'},
-  ];
-
-  blosg: any = [
-    {'title':'DS100 Website Development', 'topic':'greatest teachers in the world', 'price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS101 Vue Framework', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS102 Laravel Framework (Backend)', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS103 Angular Framework (Frontend)', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS104 Firebase', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS105 Wordpress', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS106 Cpanel', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS107 Hosting Websites', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS108 Hosting websites for free', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'DS109 GitHub and Git', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-    {'title':'how to teach marathon', 'topic':'greatest teachers in the world','price':'Hourly: $10.00-$30', 'time':'Est.Time Less than a month, Less than 30hrs/week'},
-  ]
   course_list_from_db: any =[];
 
   ngOnInit(): void {

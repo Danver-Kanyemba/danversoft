@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CourseListService } from '../service/course-list.service';
 import { SelectedCoursesService } from '../service/selected-courses.service';
@@ -13,7 +13,7 @@ export interface Vegetable {
   templateUrl: './dialog-courses.component.html',
   styleUrls: ['./dialog-courses.component.css']
 })
-export class DialogCoursesComponent  {
+export class DialogCoursesComponent implements OnInit {
   courses_list:any=[];
   index_num:any=-1;
   constructor(

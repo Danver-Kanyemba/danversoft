@@ -30,7 +30,6 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips'; 
 
 import { PostArticleComponent } from './admin/post-article/post-article.component';
-import { ArticleListComponent } from './normal/article-list/article-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CourseslistComponent } from './courseslist/courseslist.component';
 import { DialogCoursesComponent } from './dialog-courses/dialog-courses.component';
@@ -42,7 +41,6 @@ import { DialogCoursesComponent } from './dialog-courses/dialog-courses.componen
     HomeComponent,
     FooterdownComponent,
     PostArticleComponent,
-    ArticleListComponent,
     WelcomeComponent,
     CourseslistComponent,
     DialogCoursesComponent
