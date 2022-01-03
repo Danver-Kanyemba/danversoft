@@ -1,25 +1,28 @@
-<mat-card style="margin: 0px; border-radius: 0%;"> 
-    <mat-grid-list [cols]="breakpoint" rowHeight="500px">
-        <mat-grid-tile>
-            
-
-                <div
-                (window:resize)="onResize($event)"
-                mat-card-avatar 
-                style="background-image: url('/../assets/IMG-20211129-WA0005.jpg'); 
-             max-width: 150px;
-             max-height: 150px;
-             background-size: cover; 
-             width: 100%;
-             height: 100%;
-             " >
-            </div>
-            
-        
-            <h1 style="width: 100%;">
+<mat-grid-list [cols]="breakpoint" rowHeight="500px">
+    <mat-grid-tile>
+            <mat-card style="width: 100%; height: 100%;"> 
+                <mat-card-header>
+                    <img
+                        (window:resize)="onResize($event)"
+                        mat-card-image
+                        src="/../assets/IMG-20211129-WA0005SVG.svg"
+                        style="
+                        max-width: 250px;
+                        max-height: 250px;
+                        background-size: cover; 
+                        width: 100%;
+                        height: 100%;">          
+                  
+        </mat-card-header>
+        <mat-card-content>
+           
+            <mat-card-title>
                 Hi, I am Danver Kanyemba
-            </h1>
+            </mat-card-title>  
 
+            </mat-card-content>
+
+            </mat-card>
         </mat-grid-tile>
 
         <mat-grid-tile>
@@ -66,4 +69,3 @@
             </mat-card>
         </mat-grid-tile>
     </mat-grid-list>
-</mat-card>
