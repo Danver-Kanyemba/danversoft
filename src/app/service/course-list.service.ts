@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CourseListService {
+  
+
   course: any = [
     {
       'title':'DS100 Website Development',
@@ -59,12 +61,10 @@ export class CourseListService {
         'https://material.angular.io/assets/img/examples/shiba1.jpg'
       ],
       'skill': [   
-         'apple',
-         'banana',
-         'strawberry',
-         'orange',
-         'kiwi',
-         'cherry'
+         'Vue',
+         'Vue data',
+         'Vuetify',
+         'Vue-axios',
       ]
     },
     {
