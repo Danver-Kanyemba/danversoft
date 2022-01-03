@@ -15,7 +15,7 @@ import { CourseListService } from '../service/course-list.service';
 export class HomeComponent implements OnInit{
   // allMusic$ = this.ms.allMusic$;
   breakpoint:any;
-
+testnum:any=3;
   course_list_from_db: any =[];
 
   ngOnInit(): void {
@@ -47,6 +47,12 @@ export class HomeComponent implements OnInit{
     dialogRef.afterClosed().subscribe(result=> {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  showMore(){
+    this.testnum+=3
+    console.log(this.testnum);
+    
   }
 
 }
