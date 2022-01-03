@@ -17,7 +17,7 @@
 
 <mat-grid-list 
     [cols]="breakpoint" 
-    rowHeight="220px" 
+    rowHeight="300px" 
     gutterSize="0" 
     (window:resize)="onResize($event)"
     >
@@ -28,47 +28,34 @@
             <mat-card-actions>
 
                 <button 
-                    mat-mini-fab 
+                onclick="window.open('https://m.facebook.com/danver.kanyemba')"
+                    mat-fab 
                     color="">
                     <mat-icon>
                         facebook
                     </mat-icon>
                 </button>
-                <span 
-                class="mat-h2" 
-                style="color: black;"
-                >
-                Facebook
-            </span> 
+
             <br><br>
             
-            <button 
-            mat-mini-fab 
+            <button
+            onclick="window.open('https://wa.me/+263784017784?')" 
+            mat-fab 
             color="">
             <mat-icon>
                 whatsapp
             </mat-icon>
         </button>
         
-        <span 
-        style="color: black;"
-        class="mat-h2">
-        Whatsapp
-    </span> 
     <br><br>
     
     <button 
-    mat-mini-fab 
+    mat-fab 
     color="">
     <mat-icon>
         email
     </mat-icon>
-</button> 
-<span 
-style="color: black;"
-class="mat-h2">
-Email
-                </span> 
+</button> danverkanyemba33@gmail.com
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>
