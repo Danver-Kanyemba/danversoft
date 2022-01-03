@@ -1,6 +1,6 @@
   <!-- test -->
   <div 
-  *ngFor="let course_list_tile of course_list_from_db, index as cs_index" 
+  *ngFor="let course_list_tile of course_list_from_db.slice(0,testnum) , index as cs_index" 
   style="margin: 0px; padding: 0px;">
   
   <mat-card
@@ -53,4 +53,14 @@
 </div>       
 </mat-card> 
 </div>
+<br>
+<div style="text-align: center; max-width: 700px;">
+
+  <button mat-raised-button color="primary"  (click)="showMore()">
+    <span style="color: white;">
+      Show more
+    </span>
+  </button>
+</div>
+
 TODO: Link blog to firebase
