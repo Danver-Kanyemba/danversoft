@@ -1,6 +1,6 @@
-<mat-grid-list [cols]="breakpoint" rowHeight="500px">
+<mat-grid-list [cols]="breakpoint" rowHeight="350px">
     <mat-grid-tile>
-            <mat-card style="width: 100%; height: 100%;"> 
+            <mat-card style="width: 100%; height: 100%; text-align: center;"> 
                 <mat-card-header>
                     <img
                         (window:resize)="onResize($event)"
@@ -29,7 +29,7 @@
             <mat-card class="mat-card-without-border">
                 <mat-card-header>                    
                     <mat-card-title > 
-                        <h1 style="font-size: 50px; color: black;"> 
+                        <h1 style="font-size: 40px; color: black;"> 
                             <b>
                                 Unrestricted education
                             </b>                
@@ -48,21 +48,19 @@
 
                 <mat-card-actions>
                     <br>
-                    <button 
-                        mat-fab color="primary"
-                        routerLink="/courses/list"
-                        >
-                        <mat-icon>
-                            arrow_forward_Sharp
-                        </mat-icon>
-                    </button>
+
                     <button 
                         mat-button
                         routerLink="/courses/list"
                         >
-                        <p style="font-size: 15px;">
+                        <button 
+                        mat-fab color="primary"
+                        >
+                        <mat-icon>
+                            arrow_forward
+                        </mat-icon>
+                        </button>
                             Show cources for learning
-                        </p>
                     </button>
                      
                 </mat-card-actions>
