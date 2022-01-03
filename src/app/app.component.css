@@ -3,10 +3,14 @@
   }
 
 .active {
-  color:white
+  color:rgb(149, 0, 255)
 }
 .mat-h1{
   font-size: 30px;
+}
+
+.mat-title-act{
+  color: white;
 }
 
 .topnavtoolbar{

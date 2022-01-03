@@ -44,7 +44,7 @@
       mat-button
       routerLink="/"
       class="mat-title"
-      routerLinkActive="active"
+      routerLinkActive="active | mat-title-act"
       [routerLinkActiveOptions]="{exact:
       true}">
       <b>
@@ -55,7 +55,8 @@
       mat-button
       routerLink="courses/list"
       class="mat-title"
-      routerLinkActive="active"
+      routerLinkActive="active | mat-title-act"
+      
       [routerLinkActiveOptions]="{exact:
       true}">
       <b>
@@ -63,36 +64,38 @@
       </b>
     </button>
 
-    <button
-      mat-button
-      href="https://danver-kanyemba.github.io/"
-      (click)="openDanversoftOfficial()"
-      class="mat-title"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{exact:
-      true}">
-      <b>
-      Code web
-      </b>
-    </button> 
 
-    <button
-      mat-button
-      *ngIf="(afAuth.authState | async) === null"
+
+    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon style="color: white;">grain</mat-icon></button>
+
+    <mat-menu
+  #menu="matMenu">
+  <button
+  mat-button
+  mat-menu-item
+  href="https://danver-kanyemba.github.io/"
+  (click)="openDanversoftOfficial()"
+  class="mat-title"
+  routerLinkActive="active"
+  color="primary"
+  [routerLinkActiveOptions]="{exact:true}">
+  
+    DanverSoft Software website
+  
+</button> 
+
+  <button
+  mat-button
+  *ngIf="(afAuth.authState | async) === null"
+  mat-menu-item
       (click)="signIn()"
       class="mat-title"
       routerLinkActive="active"
-      [matMenuTriggerFor]="login"
-
+    color="primary"
       [routerLinkActiveOptions]="{exact:true}">
-      <mat-icon>google</mat-icon>
-      Login
+      Login with Google
     </button>
 
-
-    <mat-menu
-  #login="matMenu">
-  <button mat-button color="warn">Login with<mat-icon>google</mat-icon> Google</button>
   </mat-menu>
   </mat-toolbar-row>
 
