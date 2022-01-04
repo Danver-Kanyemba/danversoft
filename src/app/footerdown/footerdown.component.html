@@ -1,11 +1,12 @@
+
 <mat-card style="height:500px; background-color: indigo;">
     <mat-grid-list cols="1" rowHeight="500px">
         <mat-grid-tile>
             <mat-card-header>
                 <mat-card-title>
                     <h1
-                     style="font-size: 35px; color:white; text-align: center;">
-                     <b>
+                    style="font-size: 35px; color:white; text-align: center;">
+                    <b>
                          "RESPECT THE CODEMASTER'S"
                         </b>
                     </h1>
@@ -14,6 +15,12 @@
         </mat-grid-tile>
     </mat-grid-list>
 </mat-card>
+<br><br>
+<!-- app boxes svg -->
+<div style="text-align: center;">
+
+    <app-boxes *ngIf="showboxesincomponent" ></app-boxes>
+</div>
 
 <mat-grid-list 
     [cols]="breakpoint" 
@@ -25,11 +32,16 @@
         <mat-card 
             style="background-color: white;"
             class="card">
+            <mat-card-header>
+                <mat-card-title>
+                   Contact us 
+                </mat-card-title>
+            </mat-card-header>
             <mat-card-actions>
-
+                
                 <button 
                 onclick="window.open('https://m.facebook.com/danver.kanyemba')"
-                    mat-fab 
+                    mat-icon-button 
                     color="">
                     <mat-icon>
                         facebook
@@ -40,7 +52,7 @@
             
             <button
             onclick="window.open('https://wa.me/+263784017784?')" 
-            mat-fab 
+            mat-icon-button 
             color="">
             <mat-icon>
                 whatsapp
@@ -50,7 +62,7 @@
     <br><br>
     
     <button 
-    mat-fab 
+    mat-icon-button 
     color="">
     <mat-icon>
         email
@@ -65,15 +77,23 @@
             style="background-color: white;"
             class="card">
             <mat-card-header>
+                <mat-card-title>
+                    Frameworks Prefered by us:
+                </mat-card-title>
+                <mat-card-subtitle>
+                    Angular
+                </mat-card-subtitle>
+                <mat-card-subtitle>
+                    Vue.js
+                </mat-card-subtitle>
+                <mat-card-subtitle>
+                    Laravel
+                </mat-card-subtitle>
             </mat-card-header>
         </mat-card>
     </mat-grid-tile>
     
 </mat-grid-list>
-<div style="text-align: center;">
-
-    <app-boxes></app-boxes>
-</div>
 
 <mat-card 
 style="background-color: indigo; border-radius: 0%;">
@@ -81,7 +101,7 @@ style="background-color: indigo; border-radius: 0%;">
     <mat-card-subtitle  
     style="text-align: right; color: white;">
     <span>
-        2021 {{ websiteName }}
+        2021 {{ websiteName }}  Proudly Zimbabwean
            </span> 
         </mat-card-subtitle>
     </mat-card-header>

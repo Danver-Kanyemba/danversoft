@@ -3,13 +3,16 @@
   }
 
 .active {
-  color:rgb(149, 0, 255)
+  color:indigo;
+  background-color: black;
+  border-radius: 20px;
+  
 }
 .mat-h1{
   font-size: 30px;
 }
 
-.mat-title-act{
+.mat-title{
   color: white;
 }
 
