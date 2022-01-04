@@ -33,6 +33,7 @@ import { PostArticleComponent } from './admin/post-article/post-article.componen
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CourseslistComponent } from './courseslist/courseslist.component';
 import { DialogCoursesComponent } from './dialog-courses/dialog-courses.component';
+import { BoxesComponent } from './boxes/boxes.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DialogCoursesComponent } from './dialog-courses/dialog-courses.componen
     PostArticleComponent,
     WelcomeComponent,
     CourseslistComponent,
-    DialogCoursesComponent
+    DialogCoursesComponent,
+    BoxesComponent,
   ],
   imports: [
     BrowserModule,
