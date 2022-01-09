@@ -1,10 +1,12 @@
   <!-- test -->
   <div 
   *ngFor="let course_list_tile of course_list_from_db.slice(0,testnum) , index as cs_index" 
+  @fade
   style="margin: 0px; padding: 0px;">
   
   <mat-card
-     class="matcardstyle"
+      @fade
+     class="matcardstyle cardback"
      matRipple 
      (click)="openDialog(cs_index)"
      style="max-width: 700px; width: 100%;  " >

@@ -70,17 +70,24 @@ export class CourseListService {
     {
       'title':'DS102 Laravel Framework (Backend)',
       'topic':'greatest teachers in the world',
-      'price':'Hourly: $10.00-$30', 
-      'time':'Est.Time Less than a month, Less than 30hrs/week',
+      'price':'Hourly: $10.00', 
+      'time':'Est.Time more than a month, Less than 20hrs/week',
       'discover':[
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
+        "How to use Laravel generator",
+        "How to rapidly develop websites",
+        "How to safeguard or protect websites",
+        "How to create Application Programming Interfaces API's",
       ],
       'courses_content':[
-        "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+        "Lecture 1. Welcome",
+        "Lecture 2. Prerequisites for the course",
+        "Lecture 3. Introduction to Laravel",
+        "Lecture 4. Installing Laravel",
+        "Lecture 5. Setting up Composer on your PC",
+        "Lecture 6. Creating Laravel pages",
+        "Lecture 7. Working with Blade Templates",
+        "Lecture 8. Course specialization (API or Full stack creation)",
+        "Lecture 9. A look at how the industry is using Laravel for API",
       ],
       'instructor': [
         'Danver Kanyemba'
@@ -89,18 +96,17 @@ export class CourseListService {
         'https://material.angular.io/assets/img/examples/shiba1.jpg'
       ],
       'skill': [   
-         'apple',
-         'banana',
-         'strawberry',
-         'orange',
-         'kiwi',
-         'cherry'
+         'Laravel',
+         'Blade templating',
+         'API',
+         'Gates',
+         'Laravel Generator',
       ]
     },
     {
       'title':'DS103 Angular Framework (Frontend)',
       'topic':'greatest teachers in the world',
-      'price':'Hourly: $10.00-$30', 
+      'price':'Hourly: $15.00', 
       'time':'Est.Time Less than a month, Less than 30hrs/week',
       'discover':[
         "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
@@ -157,66 +163,66 @@ export class CourseListService {
          'cherry'
       ]
     },
-    {
-      'title':'DS105 Wordpress',
-      'topic':'greatest teachers in the world',
-      'price':'Hourly: $10.00-$30', 
-      'time':'Est.Time Less than a month, Less than 30hrs/week',
-      'discover':[
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
-      ],
-      'courses_content':[
-        "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-      ],
-      'instructor': [
-        'Danver Kanyemba'
-      ],
-      'instructor_image': [
-        'https://material.angular.io/assets/img/examples/shiba1.jpg'
-      ],
-      'skill': [   
-         'apple',
-         'banana',
-         'strawberry',
-         'orange',
-         'kiwi',
-         'cherry'
-      ]
-    },
-    {
-      'title':'DS106 Cpanel',
-      'topic':'greatest teachers in the world',
-      'price':'Hourly: $10.00-$30', 
-      'time':'Est.Time Less than a month, Less than 30hrs/week',
-      'discover':[
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
-        "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
-      ],
-      'courses_content':[
-        "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-        "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
-      ],
-      'instructor': [
-        'Danver Kanyemba'
-      ],
-      'instructor_image': [
-        'https://material.angular.io/assets/img/examples/shiba1.jpg'
-      ],
-      'skill': [   
-         'apple',
-         'banana',
-         'strawberry',
-         'orange',
-         'kiwi',
-         'cherry'
-      ]
-    },
+    // {
+    //   'title':'DS105 Wordpress',
+    //   'topic':'greatest teachers in the world',
+    //   'price':'Hourly: $10.00-$30', 
+    //   'time':'Est.Time Less than a month, Less than 30hrs/week',
+    //   'discover':[
+    //     "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
+    //     "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
+    //     "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
+    //   ],
+    //   'courses_content':[
+    //     "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+    //     "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+    //     "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+    //   ],
+    //   'instructor': [
+    //     'Danver Kanyemba'
+    //   ],
+    //   'instructor_image': [
+    //     'https://material.angular.io/assets/img/examples/shiba1.jpg'
+    //   ],
+    //   'skill': [   
+    //      'apple',
+    //      'banana',
+    //      'strawberry',
+    //      'orange',
+    //      'kiwi',
+    //      'cherry'
+    //   ]
+    // },
+    // {
+    //   'title':'DS106 Cpanel',
+    //   'topic':'greatest teachers in the world',
+    //   'price':'Hourly: $10.00-$30', 
+    //   'time':'Est.Time Less than a month, Less than 30hrs/week',
+    //   'discover':[
+    //     "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
+    //     "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs",
+    //     "Follow the design process: empathize with users,define pain points, ideate solutions, create wireframes and prototypes, test and iterate on designs"
+    //   ],
+    //   'courses_content':[
+    //     "Lecture 1. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+    //     "Lecture 2. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+    //     "Lecture 3. Apply your skills with hands-on projects and build a portfolio that showcases your job readiness to potential employers. You'll need to successfully finish the project(s) to earn your Certificate.",
+    //   ],
+    //   'instructor': [
+    //     'Danver Kanyemba'
+    //   ],
+    //   'instructor_image': [
+    //     'https://material.angular.io/assets/img/examples/shiba1.jpg'
+    //   ],
+    //   'skill': [   
+    //      'apple',
+    //      'banana',
+    //      'strawberry',
+    //      'orange',
+    //      'kiwi',
+    //      'cherry'
+    //   ]
+    // },
     {
       'title':'DS107 Hosting Websites',
       'topic':'greatest teachers in the world',

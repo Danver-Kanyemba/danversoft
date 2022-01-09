@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BreakpointfordevicesService } from '../service/breakpointfordevices.service';
-import { MusicService } from "../service/music.service";
-
+import { fade, slide } from '../animations';
 import { DialogCoursesComponent } from '../dialog-courses/dialog-courses.component';
 import { CourseListService } from '../service/course-list.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations:[
+    fade, slide
+  ]
 })
 
 export class HomeComponent implements OnInit{

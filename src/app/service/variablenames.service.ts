@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class VariablenamesService {
-  websiteName:string="DanverSoft Lab";
+  websiteName:string="DanverSoft Learning";
   constructor() { }
 }

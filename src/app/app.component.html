@@ -9,8 +9,6 @@
 <div 
   class="body2" 
   style="
-    height:100px; 
-    align-items:center; 
     display:flex;">
 <img 
   src="/../assets/danverkanyemba.png" 
@@ -20,12 +18,11 @@
     1px solid white;" 
     alt="">
       <h1
-        @fade
+        @slide
         style="padding-top: 20px;"
         class="mat-h1">
         {{ website_Name }}
       </h1>
-
 </div>
 <div class="body2">
 <!-- toolbar with navigation links-->
@@ -67,30 +64,28 @@
     <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon style="color: white;">grain</mat-icon></button>
 
     <mat-menu
-  #menu="matMenu">
-  <button
-  mat-button
+    #menu="matMenu"
+    style="padding: 0%;"
+    >
+
+    <button
   mat-menu-item
-  href="https://danver-kanyemba.github.io/"
   (click)="openDanversoftOfficial()"
-  class="mat-title"
-  routerLinkActive="active"
-  color="primary"
-  [routerLinkActiveOptions]="{exact:true}"> 
+  class="mat-title2"
+> 
     DanverSoft Software website
 </button> 
 
   <button
-  mat-button
   *ngIf="(afAuth.authState | async) === null"
   mat-menu-item
       (click)="signIn()"
-      class="mat-title"
-      routerLinkActive="active"
+      class="mat-title2"
+      routerLinkActive="active2"
     color="primary"
       [routerLinkActiveOptions]="{exact:true}">
       Login with Google
-    </button>
+    </button>      
 
   </mat-menu>
   </mat-toolbar-row>
@@ -106,7 +101,7 @@
   {{ user.displayName}}
 </button>
 
-<mat-menu
+<mat-menu 
   #menu="matMenu">
 <button
   mat-button
@@ -136,7 +131,7 @@
 <br>
 <br>
 <!-- for SPA -->
-<router-outlet></router-outlet>
+<router-outlet ></router-outlet>
 <!-- footer -->
 
 <app-footerdown></app-footerdown>

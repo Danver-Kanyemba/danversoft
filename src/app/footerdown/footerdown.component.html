@@ -1,11 +1,14 @@
 
-<mat-card style="height:500px; background-color: indigo;">
+<mat-card style="height:500px; background-color: black; color: white; border-radius: 0%;">
     <mat-grid-list cols="1" rowHeight="500px">
         <mat-grid-tile>
             <mat-card-header>
                 <mat-card-title>
                     <h1
-                    style="font-size: 35px; color:white; text-align: center;">
+                    style="font-size: 35px;
+                     color:white;
+                      text-align: center;
+                      ">
                     <b>
                          "RESPECT THE CODEMASTER'S"
                         </b>
@@ -24,7 +27,7 @@
 
 <mat-grid-list 
     [cols]="breakpoint" 
-    rowHeight="300px" 
+    rowHeight="250px" 
     gutterSize="0" 
     (window:resize)="onResize($event)"
     >
@@ -38,43 +41,45 @@
                 </mat-card-title>
             </mat-card-header>
             <mat-card-actions>
-                
-                <button 
+                <button
                 onclick="window.open('https://m.facebook.com/danver.kanyemba')"
-                    mat-icon-button 
-                    color="">
+                 mat-raised-button
+                 style=" padding: 10px; margin: 10px; border: 1px solid grey;width: 120px; border-bottom: 3px solid indigo;">
+                    Facebook
+                  
                     <mat-icon>
                         facebook
                     </mat-icon>
-                </button>
-
-            <br><br>
+            </button>
+            <button 
+                onclick="window.open('https://wa.me/+263784017784?')" 
+                mat-raised-button
+                style="padding: 10px; margin: 10px; border: 1px solid grey;width: 120px; border-bottom: 3px solid indigo;">
+                Whatsapp
             
-            <button
-            onclick="window.open('https://wa.me/+263784017784?')" 
-            mat-icon-button 
-            color="">
             <mat-icon>
                 whatsapp
             </mat-icon>
         </button>
-        
-    <br><br>
-    
-    <button 
-    mat-icon-button 
-    color="">
+
+        <button 
+                mat-raised-button
+                style="padding: 10px; margin: 10px; border: 1px solid grey; width: 250px; border-bottom: 3px solid indigo;">
+    Email
+
     <mat-icon>
         email
     </mat-icon>
-</button> danverkanyemba33@gmail.com
+ danversoft@gmail.com
+
+</button>
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>
     
     <mat-grid-tile>
         <mat-card 
-            style="background-color: white;"
+            style="background-color: white"
             class="card">
             <mat-card-header>
                 <mat-card-title>
@@ -95,14 +100,14 @@
     
 </mat-grid-list>
 
-<mat-card 
-style="background-color: indigo; border-radius: 0%;">
-<mat-card-header>
-    <mat-card-subtitle  
-    style="text-align: right; color: white;">
-    <span>
-        2021 {{ websiteName }}  Proudly Zimbabwean
-           </span> 
-        </mat-card-subtitle>
-    </mat-card-header>
-</mat-card>
+<div
+style="background-color: black;  padding:20px;">
+    <b>
+    <p
+    style="text-align: center; color: white; width:100%;">
+        2022 {{ websiteName }} <span style="color:red"> Proudly Zimbabwean</span>
+    </p> 
+    <br>
+</b>
+ </div>
+

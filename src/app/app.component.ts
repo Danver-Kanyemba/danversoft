@@ -13,7 +13,8 @@ import { UserService } from './service/user.service';
   styleUrls: ['./app.component.css'],
   animations: [
     fade,
-    slide
+    slide,
+    
   ]
 })
 export class AppComponent {
