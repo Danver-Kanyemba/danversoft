@@ -345,4 +345,9 @@ export class CourseListService {
     },
   ]
   constructor() { }
+
+  get course_number(){
+
+    return Object.keys(this.course).length;
+  }
 }

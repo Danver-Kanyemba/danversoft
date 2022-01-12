@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { fade, slide } from './animations';
 import { VariablenamesService } from './service/variablenames.service';
 import { NavigationEnd, Event, NavigationError, NavigationStart, Router } from '@angular/router';
+import { Title } from "@angular/platform-browser";
 
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 import firebase from 'firebase/compat/app';
 import { UserService } from './service/user.service';
+import { CourseListService } from './service/course-list.service';
 
 @Component({
   selector: 'app-root',
@@ -24,29 +26,21 @@ export class AppComponent {
   website_Name: string = this.variableService.websiteName;
 
   isLoadingTheBar:boolean = false;
+  course_no: number=0;
+
 
   constructor(public afAuth:AngularFireAuth,private router: Router,
-    private variableService: VariablenamesService, private user_service: UserService){
-    this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationStart) {
-          // Show loading indicator
-          this.isLoadingTheBar = true;
-          console.log("navigation started"+ this.isLoadingTheBar);
-        }
-        if (event instanceof NavigationEnd) {
-          // Hide loading indicator
-          this.isLoadingTheBar = false;
-          console.log("navigation stoped"+ this.isLoadingTheBar);
-        }
-        if (event instanceof NavigationError) {
-          // Hide loading indicator
-          this.isLoadingTheBar = false;
-          console.log("navigation error");
+    private variableService: VariablenamesService, private user_service: UserService,
+    private course_num: CourseListService, private titleService:Title
+    ){
+}
 
-          // Present error to user
-          console.log(event.error);
-      }
-  });
+
+ngOnInit(): void {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+  this.course_no = this.course_num.course_number;
+  this.titleService.setTitle('Danver Soft Learning')
 }
 
 async signIn(){

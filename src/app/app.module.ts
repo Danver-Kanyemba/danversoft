@@ -11,6 +11,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatMenuModule} from '@angular/material/menu'; 
 import {MatRippleModule} from '@angular/material/core'; 
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -70,7 +71,8 @@ import { BoxesComponent } from './boxes/boxes.component';
     MatDividerModule,
     MatChipsModule,
     MatRippleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatBadgeModule
   ],
   providers: [LoadingbarService],
   bootstrap: [AppComponent]
