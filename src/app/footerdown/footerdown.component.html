@@ -1,113 +1,108 @@
-
-<mat-card style="height:500px; background-color: black; color: white; border-radius: 0%;">
-    <mat-grid-list cols="1" rowHeight="500px">
-        <mat-grid-tile>
-            <mat-card-header>
-                <mat-card-title>
-                    <h1
-                    style="font-size: 35px;
-                     color:white;
-                      text-align: center;
-                      ">
-                    <b>
-                         "RESPECT THE CODEMASTER'S"
-                        </b>
-                    </h1>
-                </mat-card-title>
-            </mat-card-header>            
-        </mat-grid-tile>
-    </mat-grid-list>
+<mat-card
+  style="
+    height: 500px;
+    background-color: black;
+    color: white;
+    border-radius: 0%;
+  "
+>
+  <mat-grid-list cols="1" rowHeight="500px">
+    <mat-grid-tile>
+      <mat-card-header>
+        <mat-card-title>
+          <h1 style="font-size: 35px; color: white; text-align: center">
+            <b> "RESPECT THE CODEMASTER'S" </b>
+          </h1>
+        </mat-card-title>
+      </mat-card-header>
+    </mat-grid-tile>
+  </mat-grid-list>
 </mat-card>
-<br><br>
+<br /><br />
 <!-- app boxes svg -->
-<div style="text-align: center;">
-
-    <app-boxes *ngIf="showboxesincomponent" ></app-boxes>
+<div style="text-align: center">
+  <app-boxes *ngIf="showboxesincomponent"></app-boxes>
 </div>
 
-<mat-grid-list 
-    [cols]="breakpoint" 
-    rowHeight="250px" 
-    gutterSize="0" 
-    (window:resize)="onResize($event)"
-    >
-    <mat-grid-tile>
-        <mat-card 
-            style="background-color: white;"
-            class="card">
-            <mat-card-header>
-                <mat-card-title>
-                   Contact us 
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-                <button
-                onclick="window.open('https://m.facebook.com/danver.kanyemba')"
-                 mat-raised-button
-                 style=" padding: 10px; margin: 10px; border: 1px solid grey;width: 120px; border-bottom: 3px solid indigo;">
-                    Facebook
-                  
-                    <mat-icon>
-                        facebook
-                    </mat-icon>
-            </button>
-            <button 
-                onclick="window.open('https://wa.me/+263784017784?')" 
-                mat-raised-button
-                style="padding: 10px; margin: 10px; border: 1px solid grey;width: 120px; border-bottom: 3px solid indigo;">
-                Whatsapp
-            
-            <mat-icon>
-                whatsapp
-            </mat-icon>
+<mat-grid-list
+  [cols]="breakpoint"
+  rowHeight="250px"
+  gutterSize="0"
+  (window:resize)="onResize($event)"
+>
+  <mat-grid-tile>
+    <mat-card style="background-color: white" class="card">
+      <mat-card-header>
+        <mat-card-title> Contact us </mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button
+          onclick="window.open('https://m.facebook.com/danver.kanyemba')"
+          mat-raised-button
+          style="
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid grey;
+            width: 120px;
+            border-bottom: 3px solid indigo;
+          "
+        >
+          Facebook
+
+          <mat-icon> facebook </mat-icon>
+        </button>
+        <button
+          onclick="window.open('https://wa.me/+263784017784?')"
+          mat-raised-button
+          style="
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid grey;
+            width: 120px;
+            border-bottom: 3px solid indigo;
+          "
+        >
+          Whatsapp
+
+          <mat-icon> whatsapp </mat-icon>
         </button>
 
-        <button 
-                mat-raised-button
-                style="padding: 10px; margin: 10px; border: 1px solid grey; width: 250px; border-bottom: 3px solid indigo;">
-    Email
+        <button
+          mat-raised-button
+          style="
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid grey;
+            width: 250px;
+            border-bottom: 3px solid indigo;
+          "
+        >
+          Email
 
-    <mat-icon>
-        email
-    </mat-icon>
- danversoft@gmail.com
+          <mat-icon> email </mat-icon>
+          danversoft@gmail.com
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
 
-</button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
-    
-    <mat-grid-tile>
-        <mat-card 
-            style="background-color: white"
-            class="card">
-            <mat-card-header>
-                <mat-card-title>
-                    Frameworks Prefered by us:
-                </mat-card-title>
-                <mat-card-subtitle>
-                    Angular
-                </mat-card-subtitle>
-                <mat-card-subtitle>
-                    Vue.js
-                </mat-card-subtitle>
-                <mat-card-subtitle>
-                    Laravel
-                </mat-card-subtitle>
-            </mat-card-header>
-        </mat-card>
-    </mat-grid-tile>
-    
+  <mat-grid-tile>
+    <mat-card style="background-color: white" class="card">
+      <mat-card-header>
+        <mat-card-title> Frameworks Prefered by us: </mat-card-title>
+        <mat-card-subtitle> Angular </mat-card-subtitle>
+        <mat-card-subtitle> Vue.js </mat-card-subtitle>
+        <mat-card-subtitle> Laravel </mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
 
-<div
-style="background-color: black;  padding:20px;">
-    <b>
-    <p
-    style="text-align: center; color: white; width:100%;">
-        2022 {{ websiteName }} <span style="color:red"> Proudly Zimbabwean</span>
-    </p> 
-    <br>
-</b>
- </div>
-
+<div style="background-color: black; padding: 20px">
+  <b>
+    <p style="text-align: center; color: white; width: 100%">
+      2022 {{ websiteName }} <span style="color: red"> Proudly Zimbabwean</span>
+    </p>
+    <br />
+  </b>
+</div>

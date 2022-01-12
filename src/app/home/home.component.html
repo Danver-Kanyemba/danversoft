@@ -1,67 +1,63 @@
-  <!-- test -->
-  <div 
-  *ngFor="let course_list_tile of course_list_from_db.slice(0,testnum) , index as cs_index" 
+<!-- test -->
+<div
+  *ngFor="
+    let course_list_tile of course_list_from_db.slice(0, testnum);
+    index as cs_index
+  "
   @fade
-  style="margin: 0px; padding: 0px;">
-  
+  style="margin: 0px; padding: 0px"
+>
   <mat-card
-      @fade
-     class="matcardstyle cardback"
-     matRipple 
-     (click)="openDialog(cs_index)"
-     style="max-width: 700px; width: 100%;  " >
-     
-     <div>
-     <mat-card-header>
-       <mat-card-title style="color: indigo;">
-        {{course_list_tile.title}}
-      </mat-card-title> 
-      <br>   
-      <mat-card-subtitle>
-        <p>
-          {{course_list_tile.price}} {{course_list_tile.time}}
-        </p>
-        <p style="color: rgb(32, 32, 32); height: 48px; max-height: 48px;">
-          {{course_list_tile.topic}}
-        </p>
-        <br>
-      </mat-card-subtitle>
+    @fade
+    class="matcardstyle cardback"
+    matRipple
+    (click)="openDialog(cs_index)"
+    style="max-width: 700px; width: 100%"
+  >
+    <div>
+      <mat-card-header>
+        <mat-card-title style="color: indigo">
+          {{ course_list_tile.title }}
+        </mat-card-title>
+        <br />
+        <mat-card-subtitle>
+          <p>{{ course_list_tile.price }} {{ course_list_tile.time }}</p>
+          <p style="color: rgb(32, 32, 32); height: 48px; max-height: 48px">
+            {{ course_list_tile.topic }}
+          </p>
+          <br />
+        </mat-card-subtitle>
+      </mat-card-header>
 
-    </mat-card-header> 
+      <mat-card-content>
+        <mat-chip-list
+          class="example-chip"
+          cdkDropList
+          cdkDropListOrientation="horizontal"
+        >
+          <mat-chip
+            color="primary"
+            class="example-box"
+            cdkDrag
+            *ngFor="let course_skill of course_list_tile.skill; index as i"
+          >
+            {{ course_skill }}
+          </mat-chip>
 
-    <mat-card-content>
-      <mat-chip-list
-      class="example-chip"
-      cdkDropList 
-      cdkDropListOrientation="horizontal"
-      >
-      <mat-chip
-      color="primary"
-      class="example-box"
-      cdkDrag
-      *ngFor="let course_skill of course_list_tile.skill; index as i"
-      >
-      {{course_skill}}
-    </mat-chip>
-
-    <br><br> 
-</mat-chip-list>
-<mat-card-subtitle>
-  <mat-icon>location_on</mat-icon> Worldwide. Connect with Zoom, Google meet, Whatsapp and TeamViewer.
-  Whatsapp is for messages only
-</mat-card-subtitle>
-
-</mat-card-content> 
-</div>       
-</mat-card> 
+          <br /><br />
+        </mat-chip-list>
+        <mat-card-subtitle>
+          <mat-icon>location_on</mat-icon> Worldwide. Connect with Zoom, Google
+          meet, Whatsapp and TeamViewer. Whatsapp is for messages only
+        </mat-card-subtitle>
+      </mat-card-content>
+    </div>
+  </mat-card>
 </div>
-<br>
-<div style="text-align: center; max-width: 700px;">
-
-  <button mat-raised-button color="primary"  (click)="showMore()">
-    <span style="color: white;">
-      Show more
-    </span>
+<br />
+<div style="text-align: center; max-width: 700px">
+  <button mat-raised-button color="primary" (click)="showMore()">
+    <span style="color: white"> Show more </span>
   </button>
 </div>
 

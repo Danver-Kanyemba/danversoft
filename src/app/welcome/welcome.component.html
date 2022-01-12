@@ -1,74 +1,64 @@
 <mat-grid-list [cols]="breakpoint" rowHeight="350px">
-    <mat-grid-tile>
-            <mat-card style="width: 100%; height: 100%; text-align: center;"> 
-                <mat-card-header>
-                    <img
-                        (window:resize)="onResize($event)"
-                        mat-card-image
-                        src="/../assets/IMG-20211129-WA0005PNG.png"
-                        style="
-                        max-width: 250px;
-                        max-height: 250px;
-                        background-size: cover; 
-                        width: 100%;
-                        height: 100%;">          
-                  
-        </mat-card-header>
-        <mat-card-content>
-           
-            <mat-card-title>
-                Hi, I am Danver Kanyemba
-            </mat-card-title>  
-
-            </mat-card-content>
-
-            </mat-card>
-        </mat-grid-tile>
-
-        <mat-grid-tile>
-            <mat-card class="mat-card-without-border">
-                <mat-card-header>                    
-                    <mat-card-title > 
-                        <h1 style="font-size: 40px; color: black;"> 
-                            <b>
-                                Unrestricted education
-                            </b>                
-                        </h1> 
-                    </mat-card-title>
-                    
-                    <mat-card-subtitle>
-                        <p>
-                            <br>
-                            Develop your talents by taking courses from the greatest 
-                            geniuses in the world. We teach you to become the best in 
-                            the field                            
-                        </p>
-                    </mat-card-subtitle>                
-                </mat-card-header>
-
-                <mat-card-actions>
-                    <br>
-
-                    <button 
-                        mat-button
-                        routerLink="/courses/list"
-                        >
-                        <button 
-                        mat-fab color="primary"
-                        >
-                        <mat-icon>
-                            arrow_forward
-                        </mat-icon>
-                        </button>
-                            Show cources for learning
-                    </button>
-                     
-                </mat-card-actions>
-            </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
-    <mat-card class="mat-card-without-border">
-        <mat-card-content>
-            <button mat-button style="color: white; background-color: indigo; border-radius: 20px;">We currently do not offer certificates</button><br><br>
-        </mat-card-content>
+  <mat-grid-tile>
+    <mat-card style="width: 100%; height: 100%; text-align: center">
+      <mat-card-header>
+        <img
+          (window:resize)="onResize($event)"
+          mat-card-image
+          src="/../assets/IMG-20211129-WA0005PNG.png"
+          style="
+            max-width: 250px;
+            max-height: 250px;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+          "
+        />
+      </mat-card-header>
+      <mat-card-content>
+        <mat-card-title> Hi, I am Danver Kanyemba </mat-card-title>
+      </mat-card-content>
     </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="mat-card-without-border">
+      <mat-card-header>
+        <mat-card-title>
+          <h1 style="font-size: 40px; color: black">
+            <b> Unrestricted education </b>
+          </h1>
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          <p>
+            <br />
+            Develop your talents by taking courses from the greatest geniuses in
+            the world. We teach you to become the best in the field
+          </p>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions>
+        <br />
+
+        <button mat-button routerLink="/courses/list">
+          <button mat-fab color="primary">
+            <mat-icon> arrow_forward </mat-icon>
+          </button>
+          Show cources for learning
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-card class="mat-card-without-border">
+  <mat-card-content>
+    <button
+      mat-button
+      style="color: white; background-color: indigo; border-radius: 20px"
+    >
+      We currently do not offer certificates</button
+    ><br /><br />
+  </mat-card-content>
+</mat-card>

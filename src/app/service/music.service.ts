@@ -2,16 +2,12 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MusicService {
+  allMusic$: any;
 
-  allMusic$:any;
-
-
-  constructor(private db: AngularFireDatabase) { 
-
+  constructor(private db: AngularFireDatabase) {
     this.allMusic$ = this.db.list('/music').valueChanges();
   }
-
 }

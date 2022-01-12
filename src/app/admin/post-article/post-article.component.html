@@ -1,180 +1,129 @@
-<mat-grid-list
-[cols]="breakpoint"
-rowHeight="500px"
->
-<mat-grid-tile>
-<!-- form for adding prices -->
-<form
-    [formGroup]="form"
-    style="text-align: center;" >
-    <mat-label
-      class="mat-title">
-        add article
-    </mat-label>
-    <br>
+<mat-grid-list [cols]="breakpoint" rowHeight="500px">
+  <mat-grid-tile>
+    <!-- form for adding prices -->
+    <form [formGroup]="form" style="text-align: center">
+      <mat-label class="mat-title"> add article </mat-label>
+      <br />
 
-    <mat-form-field
-     appearance="outline">
-        <mat-label>
-          Topic
-        </mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label> Topic </mat-label>
         <input
-            class="form-control"
-            formControlName="topic"
-            matInput
-            placeholder="Ex. Beats">
-        <mat-hint
-            align="end">
-            Ex. How to code with HTML
-        </mat-hint>
-        <mat-error
-            *ngIf="topic.touched && topic.invalid">
-            <div
-                *ngIf="topic.errors?.required">
-                Topic is required
-            </div>
+          class="form-control"
+          formControlName="topic"
+          matInput
+          placeholder="Ex. Beats"
+        />
+        <mat-hint align="end"> Ex. How to code with HTML </mat-hint>
+        <mat-error *ngIf="topic.touched && topic.invalid">
+          <div *ngIf="topic.errors?.required">Topic is required</div>
         </mat-error>
-    </mat-form-field>
-    <br>
+      </mat-form-field>
+      <br />
 
-    <mat-form-field
-        appearance="outline">
-        <mat-label>
-          Details
-        </mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label> Details </mat-label>
         <textarea
-            formControlName="detail"
-            matInput
-            placeholder="Ex. for developers...">
+          formControlName="detail"
+          matInput
+          placeholder="Ex. for developers..."
+        >
         </textarea>
-        <mat-error
-            *ngIf="detail.touched && detail.invalid">
-        <div
-            *ngIf="detail.errors?.required">
-            Details are required
-        </div>
-
+        <mat-error *ngIf="detail.touched && detail.invalid">
+          <div *ngIf="detail.errors?.required">Details are required</div>
         </mat-error>
-    </mat-form-field>
-    <br>
+      </mat-form-field>
+      <br />
 
-    <mat-form-field
-        appearance="outline">
-        <mat-label>
-          Amount
-        </mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label> Amount </mat-label>
         <input
-            formControlName="amount"
-            matInput
-            placeholder="RTGS 0.0 or USD 0.0">
-            <span matPrefix>$</span>
-        <mat-error
-            *ngIf="amount.touched && amount.invalid">
-            <div
-                *ngIf="amount.errors?.required">
-                Amount is required
-            </div>
+          formControlName="amount"
+          matInput
+          placeholder="RTGS 0.0 or USD 0.0"
+        />
+        <span matPrefix>$</span>
+        <mat-error *ngIf="amount.touched && amount.invalid">
+          <div *ngIf="amount.errors?.required">Amount is required</div>
         </mat-error>
-    </mat-form-field>
-    <br>
+      </mat-form-field>
+      <br />
 
-    <mat-form-field
-        appearance="outline">
-        <mat-label>
-            Additional Information
-        </mat-label>
+      <mat-form-field appearance="outline">
+        <mat-label> Additional Information </mat-label>
         <input
-            formControlName="additional_info"
-            matInput
-            placeholder="Ex. Beats">
-    </mat-form-field>
-    <br>
+          formControlName="additional_info"
+          matInput
+          placeholder="Ex. Beats"
+        />
+      </mat-form-field>
+      <br />
 
-    <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill">
         <mat-label>Card color</mat-label>
-        <mat-select
-            formControlName="color" value="indigo">
+        <mat-select formControlName="color" value="indigo">
           <mat-option value="red">Blue</mat-option>
           <mat-option value="indigo">Indigo</mat-option>
           <mat-option value="purple">Purple</mat-option>
         </mat-select>
-        <mat-error
-            *ngIf="color.touched && amount.invalid">
-            <div
-                *ngIf="color.errors?.required">
-                Color is required
-            </div>
+        <mat-error *ngIf="color.touched && amount.invalid">
+          <div *ngIf="color.errors?.required">Color is required</div>
         </mat-error>
       </mat-form-field>
-      <br>
+      <br />
 
-    <button
-    [disabled]="!form.valid"
-    type="submit"
-    color="primary"
-    (click)="submitPrices()"
-    mat-fab>
-    <mat-icon>
-        add
-    </mat-icon>
-    </button>
-    <br>
-  </form>
+      <button
+        [disabled]="!form.valid"
+        type="submit"
+        color="primary"
+        (click)="submitPrices()"
+        mat-fab
+      >
+        <mat-icon> add </mat-icon>
+      </button>
+      <br />
+    </form>
   </mat-grid-tile>
 
-    <mat-grid-tile>
-        <form [formGroup]="form">
-          <h1 style="text-align:center">Preview</h1>
-      <mat-card
-        class="card"
-        [style.background]="color.value">
-        <button
-          mat-mini-fab
-          color="primary">
+  <mat-grid-tile>
+    <form [formGroup]="form">
+      <h1 style="text-align: center">Preview</h1>
+      <mat-card class="card" [style.background]="color.value">
+        <button mat-mini-fab color="primary">
           <mat-icon>music_note</mat-icon>
-          </button>
-          <br>
-          <br>
+        </button>
+        <br />
+        <br />
 
-          <mat-card-subtitle
-            style="color: white; margin: 0px 20px; margin-bottom: 10px;">
-            Tony Kayz Beats for
-          </mat-card-subtitle>
+        <mat-card-subtitle
+          style="color: white; margin: 0px 20px; margin-bottom: 10px"
+        >
+          Tony Kayz Beats for
+        </mat-card-subtitle>
 
-          <mat-card-title
-            style="padding-left: 0px;">
-            {{ topic.value }}
-          </mat-card-title>
+        <mat-card-title style="padding-left: 0px">
+          {{ topic.value }}
+        </mat-card-title>
 
-          <mat-card-content
-            style="align-items:center">
-            <span
-              class="mat-subheading-2"
-              style="padding:10px">
-              {{ detail.value }}
-            </span>
-          </mat-card-content>
+        <mat-card-content style="align-items: center">
+          <span class="mat-subheading-2" style="padding: 10px">
+            {{ detail.value }}
+          </span>
+        </mat-card-content>
 
-          <mat-toolbar
-            color="primary">
-              <h1
-                class="mat-title"
-                style="text-align:center;flex: 1 1 auto;">
-                {{ amount.value }}
-              </h1>
-          </mat-toolbar>
-          <mat-card-content
-          style="align-items:center">
-          <span
-            class="mat-subheading-2"
-            style="padding:10px">
+        <mat-toolbar color="primary">
+          <h1 class="mat-title" style="text-align: center; flex: 1 1 auto">
+            {{ amount.value }}
+          </h1>
+        </mat-toolbar>
+        <mat-card-content style="align-items: center">
+          <span class="mat-subheading-2" style="padding: 10px">
             {{ additional_info.value }}
           </span>
         </mat-card-content>
-            <br>
-          </mat-card>
-        </form>
-
-    </mat-grid-tile>
-  </mat-grid-list>
-  <br> <br>
+        <br />
+      </mat-card>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>
+<br />
+<br />

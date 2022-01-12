@@ -1,53 +1,45 @@
-  <mat-stepper linear="true" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>First Step</ng-template>
-        <h1>Select courses to enroll in.</h1>
-        <!-- Home component with list of courses -->
-        <app-home></app-home>
-        
-        <!-- <mat-form-field appearance="fill">
+<mat-stepper linear="true" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>First Step</ng-template>
+      <h1>Select courses to enroll in.</h1>
+      <!-- Home component with list of courses -->
+      <app-home></app-home>
+
+      <!-- <mat-form-field appearance="fill">
           <mat-label>Name</mat-label>
           <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
           
         </mat-form-field> -->
-        <h1>
-          This is the list of your selected courses
-        </h1>
-        
-        <!-- display list of selected courses -->
-        <mat-form-field appearance="fill" style="width: 100%;">
-          <mat-chip-list
+      <h1>This is the list of your selected courses</h1>
+
+      <!-- display list of selected courses -->
+      <mat-form-field appearance="fill" style="width: 100%">
+        <mat-chip-list
           class="example-chip"
-          cdkDropList 
+          cdkDropList
           cdkDropListOrientation="horizontal"
-          >
+        >
           <mat-chip
-          formControlName="selectedCourseFrm"
-          color="primary"
-          class="example-box"
-          cdkDrag
-          #coursenm
-          *ngFor="let course_select of selected_courses; index as i"
+            formControlName="selectedCourseFrm"
+            color="primary"
+            class="example-box"
+            cdkDrag
+            #coursenm
+            *ngFor="let course_select of selected_courses; index as i"
           >
-          {{course_select}}
-          <button 
-          mat-icon-button 
-          (click)="remove_from_list(coursenm)"
-            ><mat-icon>close</mat-icon></button>
+            {{ course_select }}
+            <button mat-icon-button (click)="remove_from_list(coursenm)">
+              <mat-icon>close</mat-icon>
+            </button>
           </mat-chip>
         </mat-chip-list>
-        
-        <mat-error>
-          Please select at least 1 course
-        </mat-error>
+
+        <mat-error> Please select at least 1 course </mat-error>
       </mat-form-field>
-      
-      
+
       <div>
-        <p>
-          When you have selected the courses you need click
-        </p> 
+        <p>When you have selected the courses you need click</p>
         <button mat-button matStepperNext>Next</button>
       </div>
     </form>
@@ -58,58 +50,50 @@
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Full name</mat-label>
-          <input 
-          matInput 
-          formControlName="full_Name"
-          required>
+          <input matInput formControlName="full_Name" required />
           <mat-hint>Ex. Mrs Crowley</mat-hint>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input 
-    matInput 
-    formControlName="email"
-    required>
-    <mat-hint>mcrowley@gmail.com</mat-hint>
-  </mat-form-field>
-</p>
+          <input matInput formControlName="email" required />
+          <mat-hint>mcrowley@gmail.com</mat-hint>
+        </mat-form-field>
+      </p>
 
-<div>
-  <button mat-button matStepperPrevious>Back</button>
-  <button mat-button matStepperNext>Next</button>
-</div>
-</form>
-</mat-step>
-<mat-step >
-  <ng-template matStepLabel>Bookings</ng-template>
-  <p>This is the last step you may click the whatsapp icon to submit your details to DanverSoft Whatsapp</p>
-  
-  <button 
-  (click)="goToLink()"
-  mat-fab 
-  style="background-color: rgb(0, 216, 0);"
-  >
-  <mat-icon style="color: white;">whatsapp</mat-icon>
-</button>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Bookings</ng-template>
+    <p>
+      This is the last step you may click the whatsapp icon to submit your
+      details to DanverSoft Whatsapp
+    </p>
 
-<button
-(click)="goToLink()"
-mat-button >
-Book on whatsapp
-</button>
-<div></div>
-<button mat-button matStepperPrevious>Back</button>
-<button mat-button matStepperNext>Next</button>
+    <button
+      (click)="goToLink()"
+      mat-fab
+      style="background-color: rgb(0, 216, 0)"
+    >
+      <mat-icon style="color: white">whatsapp</mat-icon>
+    </button>
 
-</mat-step>
-<mat-step>
-  <ng-template matStepLabel>Done</ng-template>
-  <p>You are now done.</p>
-  <div>
+    <button (click)="goToLink()" mat-button>Book on whatsapp</button>
+    <div></div>
     <button mat-button matStepperPrevious>Back</button>
-    <button mat-button (click)="stepper.reset()">Reset</button>
-  </div>
-</mat-step>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
 </mat-stepper>

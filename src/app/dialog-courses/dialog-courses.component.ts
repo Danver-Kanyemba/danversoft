@@ -11,34 +11,32 @@ export interface Vegetable {
 @Component({
   selector: 'app-dialog-courses',
   templateUrl: './dialog-courses.component.html',
-  styleUrls: ['./dialog-courses.component.css']
+  styleUrls: ['./dialog-courses.component.css'],
 })
 export class DialogCoursesComponent implements OnInit {
-  courses_list:any=[];
-  index_num:any=-1;
+  courses_list: any = [];
+  index_num: any = -1;
   constructor(
-      private courseService:CourseListService,
-      private select_CS_Service: SelectedCoursesService,
-      private _snackBar: MatSnackBar,
-      @Inject(MAT_DIALOG_DATA) private data: {current_index: string},
-      ) { }
+    private courseService: CourseListService,
+    private select_CS_Service: SelectedCoursesService,
+    private _snackBar: MatSnackBar,
+    @Inject(MAT_DIALOG_DATA) private data: { current_index: string }
+  ) {}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.   index_num.current_index
     this.courses_list = this.courseService.course;
     this.index_num = this.data.current_index;
-
   }
 
-  addCourse(courseTitle:HTMLElement){
+  addCourse(courseTitle: HTMLElement) {
     console.log(courseTitle);
-    
-    this.select_CS_Service.add(courseTitle.innerText);
-    this._snackBar.open(
-      courseTitle.innerText +`  added successfully`,'Ok', {duration: 3000}
-      );
-      // this.close();
-  }
 
+    this.select_CS_Service.add(courseTitle.innerText);
+    this._snackBar.open(courseTitle.innerText + `  added successfully`, 'Ok', {
+      duration: 3000,
+    });
+    // this.close();
+  }
 }
