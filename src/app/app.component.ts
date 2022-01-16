@@ -43,7 +43,25 @@ export class AppComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.course_no = this.course_num.course_number;
-    this.titleService.setTitle('Danver Soft Learning');
+    this.titleService.setTitle('XtraCourse');
+ 
+ 
+    let path: any = document.querySelector('path');
+    let pathLength = path.getTotalLength();
+  
+    path.style.strokeDasharray = pathLength + '  ' + pathLength;
+    path.style.strokeDashoffset = pathLength
+  
+    window.addEventListener('scroll', ()=>{
+      
+      var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+      
+      var drawLength = pathLength * scrollPercentage;
+  
+      path.style.strokeDashoffset = pathLength - drawLength;
+    })
+  
+
   }
 
   async signIn() {
@@ -60,4 +78,9 @@ export class AppComponent {
   openDanversoftOfficial() {
     window.open('https://danver-kanyemba.github.io/');
   }
+
+
+
+  
+
 }

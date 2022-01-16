@@ -35,6 +35,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CourseslistComponent } from './courseslist/courseslist.component';
 import { DialogCoursesComponent } from './dialog-courses/dialog-courses.component';
 import { BoxesComponent } from './boxes/boxes.component';
+import { SponseredLinksComponent } from './sponsered-links/sponsered-links.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { BoxesComponent } from './boxes/boxes.component';
     CourseslistComponent,
     DialogCoursesComponent,
     BoxesComponent,
+    SponseredLinksComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

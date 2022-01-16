@@ -26,7 +26,7 @@
 
 <mat-grid-list
   [cols]="breakpoint"
-  rowHeight="250px"
+  rowHeight="370px"
   gutterSize="0"
   (window:resize)="onResize($event)"
 >
@@ -89,19 +89,36 @@
   <mat-grid-tile>
     <mat-card style="background-color: white" class="card">
       <mat-card-header>
-        <mat-card-title> Frameworks Prefered by us: </mat-card-title>
-        <mat-card-subtitle> Angular </mat-card-subtitle>
-        <mat-card-subtitle> Vue.js </mat-card-subtitle>
-        <mat-card-subtitle> Laravel </mat-card-subtitle>
+
       </mat-card-header>
+      <mat-card-content>
+        <mat-card-title> Frameworks Prefered by us: </mat-card-title>
+        <mat-divider>
+        </mat-divider>
+        <br>
+          <mat-card-subtitle style="color: black;"> Angular </mat-card-subtitle>
+          <mat-card-subtitle style="color: black;"> Vue.js </mat-card-subtitle>
+          <mat-card-subtitle style="color: black;"> Laravel </mat-card-subtitle>
+          <br>
+
+        <mat-card-title>Sponsored Links</mat-card-title>
+        <mat-divider>
+        </mat-divider>
+        <button mat-button onclick="window.open('https://my.webdev.co.zw/aff.php?aff=328')">Webdev <span style="margin-left: 50px; color: indigo;">Hosting Services</span> </button>
+        <button mat-button onclick="window.open('https://my.webdev.co.zw/aff.php?aff=328')">Webdev <span style="margin-left: 50px; color: indigo;">Web Development</span> </button>
+        <button mat-button onclick="window.open('https://my.webdev.co.zw/aff.php?aff=328')">Webdev <span style="margin-left: 50px; color: indigo;">Online payments</span> </button>
+
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 
+
+
 <div style="background-color: black; padding: 20px">
   <b>
     <p style="text-align: center; color: white; width: 100%">
-      2022 {{ websiteName }} <span style="color: red"> Proudly Zimbabwean</span>
+      2022 {{ websiteName }} <span style="color: indigo"> Proudly Zimbabwean</span>
     </p>
     <br />
   </b>

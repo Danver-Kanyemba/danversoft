@@ -3,6 +3,10 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap";
 
+.flexExpand {
+  flex: 1 1 auto;
+}
+
 body {
   margin: 0 auto;
   background-color: white;
@@ -13,6 +17,7 @@ body {
 }
 .body3 {
   padding: 0px 0px;
+  color: indigo;
 }
 
 .mat-h1 {

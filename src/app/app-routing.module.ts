@@ -5,11 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostArticleComponent } from './admin/post-article/post-article.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'courses/list', component: CourseslistComponent },
-  { path: 'admin/PostArticle', component: PostArticleComponent },
+  { path: 'XtraCourse', component: WelcomeComponent },
+  { path: 'XtraCourse/courses/list', component: CourseslistComponent },
+  // { path: 'admin/PostArticle', component: PostArticleComponent },
+  { path: '**', component: PageNotFoundComponent },
+
   //  PostArticleComponent
 ];
 

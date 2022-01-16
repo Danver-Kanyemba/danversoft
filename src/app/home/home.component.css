@@ -1,34 +1,3 @@
-.card {
-  padding: 50px 25% 0px 5%;
-  background-image: url("/../assets/studiohome.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 210px;
-  border-radius: 0%;
-}
-
-.card2 {
-  padding: 25% 25% 0px 5%;
-  background-image: url("/../assets/flstudiologofree.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 210px;
-  border-radius: 0%;
-}
-
-.card3 {
-  padding: 5% 0px 0px 5%;
-  background-image: url("/../assets/flspeakerinfo.jpg");
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 210px;
-  border-radius: 0%;
-  height: auto;
-}
-
 .card4 {
   padding: 5% 25% 0px 5%;
   background-color: whitesmoke;
