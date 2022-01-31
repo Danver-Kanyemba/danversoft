@@ -52,13 +52,13 @@
     <text
        xml:space="preserve"
        id="text5015"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect5017);fill:url(#linearGradient24688);fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect5017);fill:url(#linearGradient24688);fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
        transform="translate(-9.3292057,-23.649071)"><tspan
          x="10.503906"
          y="59.369141"
-         id="tspan44756"><tspan
+         id="tspan7771"><tspan
            style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-           id="tspan44754">X</tspan></tspan></text>
+           id="tspan7769">X</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:url(#linearGradient41976);fill-opacity:1;stroke:none"
@@ -68,6 +68,6 @@
          id="tspan8795"
          x="20.533737"
          y="44.557457"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:url(#linearGradient41976);fill-opacity:1">C</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:url(#linearGradient41976);fill-opacity:1;stroke:#ffffff;stroke-opacity:1">C</tspan></text>
   </g>
 </svg>

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class SelectedCoursesService {
-  select_these_ones: any = [];
+  select_these_ones: any = ['ff'];
 
   constructor() {}
 
@@ -14,5 +14,12 @@ export class SelectedCoursesService {
   }
   add(course_add: any) {
     this.select_these_ones.push(course_add);
+    console.log(this.select_these_ones);
+    
+  }
+
+  get course_selected_num() {
+    // return this.select_these_ones.length;
+    return Object.keys(this.select_these_ones).length;
   }
 }

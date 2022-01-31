@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatBadgeModule } from '@angular/material/badge';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -77,6 +78,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatRippleModule,
     MatSnackBarModule,
     MatBadgeModule,
+    MatSidenavModule
   ],
   providers: [LoadingbarService],
   bootstrap: [AppComponent],

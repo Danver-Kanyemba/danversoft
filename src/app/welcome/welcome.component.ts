@@ -12,7 +12,6 @@ export class WelcomeComponent  {
   constructor(private breakpointService: BreakpointfordevicesService) {
     this.breakpoint = this.breakpointService.onInCurrentGridwith2;
   }
-
   
   onResize(event: any) {
     this.breakpoint = this.breakpointService.getonResizeCurrentGridwith2(event);

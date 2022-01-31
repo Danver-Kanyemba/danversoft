@@ -1,45 +1,59 @@
-<!-- progress bar -->
-<mat-progress-bar
-  *ngIf="isLoadingTheBar"
-  mode="indeterminate"
-  value="50"
-  color="warn"
+<button mat-button 
+routerLink="XtraCourse"
 >
-</mat-progress-bar>
-
-<div class="body2" style="display: flex">
   <img
     src="/../assets/XC.svg"
     alt=""
-  />
+    />
+      <span @slide style="color: indigo;" class="mat-h1">
+        {{ website_Name }}
+      </span>
+</button>
 
-  <h1 @slide style="padding-top: 20px" class="mat-h1">
-    {{ website_Name }}
-  </h1>
+<div class="body2" style="display: flex" routerLink="XtraCourse">
 </div>
 <div class="body2">
   <!-- toolbar with navigation links-->
   <mat-toolbar class="topnavtoolbar">
     <mat-toolbar-row>
       <span class="flexExpand"> </span>
-
-      <button
-        mat-button
-        routerLink="XtraCourse"
-        class="mat-title"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        Home
+      <!-- matBadge="{{selected_course2}}" -->
+      <button mat-icon-button         
+        [matMenuTriggerFor]="cart"
+        matBadgeColor="accent">
+        <mat-icon style="color: white;">shopping_cart</mat-icon>
       </button>
+
+      <mat-menu #cart="matMenu">
+
+          <mat-chip-list
+            class="example-chip"
+            cdkDropList
+            cdkDropListOrientation="horizontal"
+          >
+            <mat-chip
+              formControlName="selectedCourseFrm"
+              color="primary"
+              class="example-box"
+              cdkDrag
+              #coursenm
+              *ngFor="let course_select of selected_courses_list; index as i"
+            >
+              {{ course_select }}
+              <button mat-icon-button (click)="remove_from_list(coursenm)">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-chip>
+          </mat-chip-list>
+  
+        </mat-menu>
+
 
       <button
         mat-button
         routerLink="XtraCourse/courses/list"
         class="mat-title"
         routerLinkActive="active"
-        [matBadge]="course_no"
-        matBadgeColor="accent"
         [routerLinkActiveOptions]="{ exact: true }"
       >
         Courses
@@ -108,28 +122,6 @@
 <br />
 <br />
 <div class="line-container">
-
-<!-- <svg
-width="500px"
-height="500px"
-viewBox="0 0 500 500"
-version="1.1"
-id="SVGRoot"
-preserveAspectRatio="xMidYMax meet"
->
-<defs
-  id="defs1468" />
-<g
-  id="layer1">
- <path
-    style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-    d="m 500.27525,46.116645 c 0,0 -37.46391,91.311475 -163.34198,106.826075 -125.87806,15.5146 -106.77346,140.08129 -106.77346,140.08129 0,0 37.38295,-121.62904 153.04966,-127.24392 115.66671,-5.61489 -29.46873,53.82075 -29.46873,53.82075 0,0 94.54473,-24.47891 69.3158,-9.22249 -25.22893,15.25643 -108.77023,32.85681 -116.34834,52.45582 -7.57811,19.599 191.0324,-52.26761 170.70351,-18.78903 -20.32889,33.47857 -166.81899,102.98635 -166.81899,102.98635 0,0 -101.79441,30.77756 -87.17264,99.94415 14.62178,69.1666 4.17399,50.81887 4.17399,50.81887"
-    id="path1648" />
-</g>
-</svg>
- -->
-
-
 </div>
 <!-- for SPA -->
 <router-outlet></router-outlet>

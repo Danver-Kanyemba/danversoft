@@ -15,7 +15,8 @@
 
 .active {
   color: indigo;
-  background-color: black;
+  border-bottom: white 3px solid;
+  border-radius: 0%;
 }
 
 .active2 {
